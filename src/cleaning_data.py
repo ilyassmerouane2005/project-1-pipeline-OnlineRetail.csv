@@ -4,7 +4,6 @@ df = pl.read_csv('data/raw/OnlineRetail.csv' , schema_overrides={'InvoiceNo' : p
 def data_cleaning (data : pl.DataFrame) -> pl.DataFrame:
     data_clean = (
         data
-        .unique()
         .drop_nulls(subset=['Description'])
         .filter(
             ~ pl.col('InvoiceNo').str.contains(r'[a-zA-Z]') ,
@@ -23,6 +22,7 @@ def data_cleaning (data : pl.DataFrame) -> pl.DataFrame:
             pl.col("InvoiceDate").str.strptime(pl.Datetime, format="%m/%d/%Y %H:%M", strict=False)
         ])
         .drop('CustomerID')
+        .unique()
     )
     return data_clean
 print(data_cleaning(df))
