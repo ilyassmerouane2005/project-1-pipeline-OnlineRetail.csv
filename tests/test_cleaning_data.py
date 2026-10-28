@@ -19,4 +19,3 @@ def test_clean_data():
     assert row_registered['IsRegistered'][0] == 'yes'
     guest_row = result.filter(pl.col('InvoiceNo') == 536366)
     assert guest_row['IsRegistered'][0] == 'no'
-
