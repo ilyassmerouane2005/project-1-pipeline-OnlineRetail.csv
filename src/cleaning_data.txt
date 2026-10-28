@@ -1,0 +1,10 @@
+1) there is duplicates rows we will remove them
+2) pourcentage of missing values on Description is 0.27 we will drop rows with nulls here and for nulls of 
+CustomerID we will drop the Column CustomerID and Create new Column IsRegistered that have yes if the CustomerID is not null else no
+3) the percentage of rows that contains characters in InvoiceNo is 1.71 so we will drop this rows and cast into int
+4) we need to lowercase characters in StockCode column
+5) we need to trim and lowercase in Description column
+6) the percentage of rows with Quantity <= 0 is 1.96 so we will drop this rows
+7) the percentage of rows with UnitPrice <= 0 is 0.46 so we will drop this rows
+8) we need to lowercase in Country column
+9) we need to cast InvoiceDate into a datetime

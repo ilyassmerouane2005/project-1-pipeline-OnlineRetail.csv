@@ -1,0 +1,8 @@
+1) We need to check at first if there is any duplicates rows 
+2) check for missing values
+3) InvoiceNo: column 'InvoiceNo' type is str we need to check if some rows contains some characters
+4) StockCode: column 'StockCode' is str we need to check if there is some white spaces there .
+5) Description: column 'Description' is str we need to check if there is some white spaces there .
+6) Quantity : column 'Quantity' can not be less or equal to 0 we need to check rows that did not fullfil this condition .
+7) UnitPrice : column 'UnitPrice' can not be less or equal to 0 we need to check rows that did not fullfil this condition .
+8) Country : column 'Country' we need to check if there is any white spaces
