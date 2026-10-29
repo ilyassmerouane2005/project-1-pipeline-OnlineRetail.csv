@@ -27,5 +27,5 @@ select
 from raw_data
 """
 pl.Config.set_tbl_rows(-1)
-results = duckdb.query(detecting_query).pl()
-print(results.transpose(include_header=True, header_name="metric", column_names=["value"]))
+checking_results = duckdb.query(detecting_query).pl()
+print(checking_results.transpose(include_header=True, header_name="metric", column_names=["value"]))
